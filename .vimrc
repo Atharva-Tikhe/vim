@@ -8,7 +8,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-Plugin 'tmhedberg/SimplyFold'
+Plugin 'tmhedberg/SimpylFold'
 call vundle#end()
 
 filetype plugin indent on
@@ -36,3 +36,23 @@ nnoremap <C-H> <C-W><C-H>
 set foldmethod=indent
 set foldlevel=99
 nnoremap <Leader>f za
+
+
+" Python Indentation
+au BufNewFile,BufRead *.py
+\ set tabstop=4
+\ set softtabstop=4
+\ set shiftwidth=4
+\ set textwidth=79
+\ set expandtab
+\ set autoindent
+\ set fileformat=unix
+
+au BufNewFile,BufRead *.js, *.html, *.css
+\ set tabstop=2
+\ set softtabstop=2
+\ set shiftwidth=2
+
+
+
+
